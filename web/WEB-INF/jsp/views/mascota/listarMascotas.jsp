@@ -78,7 +78,7 @@ $(document).ready(function() {
                 <td><u:out value="${mascotas.raza}"></u:out></td>
                 <td><u:out value="${mascotas.tipo_animal}"></u:out></td>
                 <td><img src='<u:url value="${mascotas.fotos}"/>' whidth="50px" height="50px"/></td>     
-                <td><a href="delete_mascota.htm?id=${mascotas.id}"><button>delete</button></a> </td>
+                <td><a href="delete_mascota.htm?id=${mascotas.id}&fotoOld=${mascotas.fotos}""><button>delete</button></a> </td>
                 <td><a href="update_mascota.htm?id=${mascotas.id}&fotoOld=${mascotas.fotos}"><button>update</button></a> </td>
                
             </tr>

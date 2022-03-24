@@ -139,15 +139,25 @@ public class Mascota_Controller {
          
     
     @RequestMapping("delete_mascota.htm")
-    public ModelAndView borrarMascota(HttpServletRequest req){
+    public ModelAndView borrarUsuario(HttpServletRequest req) {
         ModelAndView mav = new ModelAndView();
+        Dao_mascotas userDao = new Dao_mascotas();
         int id = Integer.parseInt(req.getParameter("id"));
-        String sql = "delete  from mascotas where id = ? ";
-        JdbcTemplate.update(sql ,id);
+        mascotaBean1 usu = this.consultarcliente (Integer.parseInt(req.getParameter("id")));
+        //Captura la direccion del archivo
+        String deletePath = req.getServletContext().getRealPath("") + File.separator;
+        String fotos = req.getParameter("fotos");
+        //Metodo que borra el cliente y la imagen
+        userDao.deleteImg(usu.getFotos(), deletePath, id);
         mav.setViewName("redirect:/listarMascotas.htm");
         return mav;
-        
     }
+    
+    
+    
+    
+    
+    
     @RequestMapping(value="update_mascota.htm", method = RequestMethod.GET)
     public ModelAndView updateUsuario(HttpServletRequest req){
         ModelAndView mav = new ModelAndView();

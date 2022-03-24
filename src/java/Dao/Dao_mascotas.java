@@ -96,6 +96,22 @@ public class Dao_mascotas {
     }
 
 }
+    public void deleteImg(String fotos, String deletePath, int id) {
+        final String DELETE_DIRECTORY = "..\\..\\web\\";
+        this.jdbcTemplate = new JdbcTemplate(con.conDB());
+        //Ubicación del archivo en el servidor
+        String deleteFile = deletePath + DELETE_DIRECTORY + fotos;
+        File borrar = new File(deleteFile);
+        System.out.println(fotos);
+        if (borrar.delete()) {
+            String sql = "delete from usuarios where id = ?";
+            jdbcTemplate.update(sql, id);
+        } else {
+            System.out.println("No se pudo eliminar la imagen");
+        }
+    }
+
+
 
 
 
