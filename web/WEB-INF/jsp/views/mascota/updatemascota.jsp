@@ -3,7 +3,7 @@
     Created on : 14/02/2022, 08:40:36 AM
     Author     : SENA
 --%>
-
+<%@taglib prefix="u" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file ="../pieycuerpo/menu.jsp" %>
@@ -46,7 +46,7 @@
               
           <h1>FORMULARIO USUARIO</h1>  
            <div class="form-group">
-           <form:form commandName="mascotas" method="post">
+           <form:form commandName="mascotas" method="post" enctype="multipart/form-data">
              <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
        
            
@@ -57,7 +57,12 @@
             <form:input path="raza"></form:input><br><br>
             
             <form:label path="tipo_animal">email</form:label> <br>
-            <form:input path="tipo_animal"></form:input><br><br><br>
+            <form:input path="tipo_animal"></form:input><br>
+            <img src='<u:url value="${mascotas.fotos}"/>' whidth="50px" height="50px"/>
+            <form:label path="fotos" >foto</form:label> <br>
+            <form:input path="fotos" class="form-control" type="file"></form:input><br><br>
+           
+            
             <br>
             <input class="btn btn-warning" type="submit" name="btnCrearUsuario"  value="CrearUsuario"/> <br><br>
             <a class="btn btn-darger" href="../index.jsp"><input class="btn btn-danger" type="button" value="Regresar" name="btnRegresar"/></a>
