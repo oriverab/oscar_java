@@ -55,6 +55,7 @@ public void accUsuarioSinFoto(usuarioBean usu, ArrayList<String> listados){
 
 }
         
+
 public void accUsuarioConFoto(usuarioBean usu,
         boolean isMultipart,
         HttpServletRequest request,
