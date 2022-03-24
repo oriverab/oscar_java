@@ -73,8 +73,8 @@ $(document).ready(function() {
                 <td><img src='<u:url value="${datos.foto}"/>' whidth="50px" height="50px"/></td>
                 <td><u:out value="${datos.nombre}"></u:out></td>
                 <td><img src='<u:url value="${datos.fotos}"/>' whidth="50px" height="50px"/></td>
-                <td><a href="delete_Adopcion.htm?cod=${datos.cod}"><button>delete</button></a> </td>
-                <td><a href="update_Adopcion.htm?cod=${datos.cod}"><button>update</button></a> </td>
+                <td><a href="delete_Adopcion.htm?cod=${datos.cod}"><img src="https://cdn-icons.flaticon.com/png/512/3687/premium/3687412.png?token=exp=1648139807~hmac=911dc8a0707e0faec88e0e528abd3598" width="50px" height="50px"></img></a> </td>
+                <td><a href="update_Adopcion.htm?cod=${datos.cod}"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" width="50px" height="50px"></img> </td>
                
         
         </tr>

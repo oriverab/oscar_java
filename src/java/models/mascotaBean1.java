@@ -20,6 +20,7 @@ public class mascotaBean1 {
           String tipo_animal;
           String fotos;
           String fotoOld;
+          Boolean estado; 
     public String getId() {
         return id;
     }
@@ -68,22 +69,31 @@ public class mascotaBean1 {
         this.fotoOld = fotoOld;
     }
 
-  
+    public Boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+   
     
 
     public mascotaBean1() {
     }
 
-    public mascotaBean1(String id, String nombre, String raza, String tipo_animal, String fotos, String fotoOld) {
+    public mascotaBean1(String id, String nombre, String raza, String tipo_animal, String fotos, String fotoOld, Boolean estado) {
         this.id = id;
         this.nombre = nombre;
         this.raza = raza;
         this.tipo_animal = tipo_animal;
         this.fotos = fotos;
         this.fotoOld = fotoOld;
+        this.estado = estado;
     }
 
-    
+
 
     
 
