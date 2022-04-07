@@ -29,13 +29,13 @@
            
                         
             <form:label path="nombre">nombre</form:label> <br>
-            <form:input path="nombre"></form:input><br><br>
+            <form:input path="nombre" required="required"></form:input><br><br>
             
-            <form:label path="raza">raza</form:label> <br>
-            <form:input path="raza"></form:input><br><br>
+            <form:label path="raza" required="required">raza</form:label> <br>
+            <form:input path="raza" required="required"></form:input><br><br>
             
-            <form:label path="tipo_animal">email</form:label> <br>
-            <form:input path="tipo_animal"></form:input><br><br>
+            <form:label path="tipo_animal" required="required">email</form:label> <br>
+            <form:input path="tipo_animal" required="required"></form:input><br><br>
            
             <form:button name="enviar" Class="btn btn-warning">enviar</form:button> <br><br>
             <br>

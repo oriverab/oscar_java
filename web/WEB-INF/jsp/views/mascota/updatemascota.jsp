@@ -50,17 +50,17 @@
              <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
        
            
-            <form:label path="nombre">nombre</form:label> <br>
-            <form:input path="nombre"></form:input><br><br>
+            <form:label path="nombre" required="required">nombre</form:label> <br>
+            <form:input path="nombre" required="required"></form:input><br><br>
             
-            <form:label path="raza">raza</form:label> <br>
-            <form:input path="raza"></form:input><br><br>
+            <form:label path="raza" required="required">raza</form:label> <br>
+            <form:input path="raza" required="required"></form:input><br><br>
             
-            <form:label path="tipo_animal">email</form:label> <br>
-            <form:input path="tipo_animal"></form:input><br>
+            <form:label path="tipo_animal" required="required">email</form:label> <br>
+            <form:input path="tipo_animal" required="required"></form:input><br>
             <img src='<u:url value="${mascotas.fotos}"/>' whidth="50px" height="50px"/>
-            <form:label path="fotos" >foto</form:label> <br>
-            <form:input path="fotos" class="form-control" type="file"></form:input><br><br>
+            <form:label path="fotos" required="required">foto</form:label> <br>
+            <form:input path="fotos" class="form-control" type="file" required="required"></form:input><br><br>
            
             
             <br>

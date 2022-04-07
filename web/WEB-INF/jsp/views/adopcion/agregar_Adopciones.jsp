@@ -62,17 +62,17 @@
             <h2 class="title-section">Drop Us a Line</h2>
             <div class="divider"></div>
             
-            <form:form commandName="listaradopciones" method="post">
+            <form:form commandName="listaradopciones" method="post" >
               <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
             <div class="form-group">
            
                         
             <form:label path="cod">codigo de la consulta</form:label> <br>
-            <form:input path="cod" readonly="true"></form:input><br><br>
+            <form:input path="cod" readonly="true" required="required"></form:input><br><br>
             
-            <form:label path="fecha">fecha</form:label> <br>
-            <form:input path="fecha" type="date"></form:input><br><br>
-            <form:label  path="id_usuario" >Nombre usuario</form:label>
+            <form:label path="fecha" required="required">fecha</form:label> <br>
+            <form:input path="fecha" type="date" required="required"></form:input><br><br>
+            <form:label  path="id_usuario" required="required">Nombre usuario</form:label>
             <br>
             <form:select  path="id_usuario">
                       <u:forEach var="datosus" items="${listarusuario}">
@@ -81,9 +81,9 @@
             </form:select>
             <br><br>
             
-            <form:label  path="id_mascota" >Nombre </form:label>
+            <form:label  path="id_mascota" required="required" >Nombre </form:label>
             <br>
-            <form:select  path="id_mascota" >
+            <form:select  path="id_mascota" required="required" >
                       <u:forEach var="datos" items="${listarMascotas}">
                             <option value="${datos.id}">${datos.nombre}</option> 
                        </u:forEach>

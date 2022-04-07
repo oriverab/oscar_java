@@ -50,20 +50,20 @@
              <form:errors path="*" element="div" cssClass="alert alert-danger"></form:errors>
        
             
-            <form:label path="cedula">Cedula</form:label> <br>
-            <form:input class="form-control" path="cedula"/>Cedula <br><br>
+            <form:label path="cedula" required="required">Cedula</form:label> <br>
+            <form:input class="form-control" path="cedula" required="required"/>Cedula <br><br>
                         
-            <form:label path="nombres" >nombre</form:label> <br>
-            <form:input path="nombres" class="form-control"></form:input><br><br>
+            <form:label path="nombres" required="required">nombre</form:label> <br>
+            <form:input path="nombres" class="form-control" required="required"></form:input><br><br>
             
-            <form:label path="telefono" >telefono</form:label> <br>
-            <form:input path="telefono" class="form-control"></form:input><br><br>
+            <form:label path="telefono" required="required">telefono</form:label> <br>
+            <form:input path="telefono" class="form-control" required="required"></form:input><br><br>
             
-            <form:label path="email" >email</form:label> <br>
-            <form:input path="email" class="form-control"></form:input><br><br>
+            <form:label path="email" required="required">email</form:label> <br>
+            <form:input path="email" class="form-control" required="required"></form:input><br><br>
             <img src='<u:url value="${usuarios.foto}" />' whidth="50px" height="50px"/>
-            <form:label path="foto" >foto</form:label> <br>
-            <form:input path="foto" class="form-control" type="file"></form:input><br><br>
+            <form:label path="foto" required="required" >foto</form:label> <br>
+            <form:input path="foto" class="form-control" type="file" required="required"></form:input><br><br>
            
             <br>
             <br>

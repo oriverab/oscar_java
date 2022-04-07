@@ -54,16 +54,16 @@
              <div class="form-group">
             
             <form:label path="fecha">fecha</form:label> <br>
-            <form:input path="fecha" type="date"></form:input><br><br>
+            <form:input path="fecha" type="date" required="required"></form:input><br><br>
             <form:label  path="id_usuario" >Nombre usuario</form:label>
-            <form:select  path="id_usuario">
+            <form:select  path="id_usuario" required="required">
                       <u:forEach var="datosus" items="${listarusuario}">
                             <option value="${datosus.id}">${datosus.nombres}</option> 
                        </u:forEach>
             </form:select>
             <br><br>
             
-            <form:label  path="id_mascota" >Nombre </form:label>
+            <form:label  path="id_mascota" required="required">Nombre </form:label>
             <form:select  path="id_mascota" >
                       <u:forEach var="datos" items="${listarMascotas}">
                             <option value="${datos.id}">${datos.nombre}</option> 
